@@ -1,0 +1,7 @@
+[
+  {"productLine": "Accesorios de Cocina", "productType": "Cuberteria", "productName": "Tenedor", "quantity": 4, "price": 2.50},
+  {"productLine": "Accesorios de Cocina", "productType": "Cuberteria", "productName": "Vaso", "quantity": 6, "price": 5.25},
+  {"productLine": "Electronica", "productType": "Videoconsolas", "productName": "Playstation 4", "quantity": 147, "price": 158.64},
+  {"productLine": "Electronica", "productType": "Tablets", "productName": "Ipad Pro", "quantity": 303, "price": 65.67},
+  {"productLine": "Electronica", "productType": "Smartphones", "productName": "Samsung Galaxy 7", "quantity": 1415, "price": 174.61}
+]
