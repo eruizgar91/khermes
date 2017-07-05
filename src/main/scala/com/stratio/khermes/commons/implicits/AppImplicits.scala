@@ -19,7 +19,7 @@ package com.stratio.khermes.commons.implicits
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import com.stratio.khermes.commons.constants.AppConstants
-import com.stratio.khermes.persistence.dao.ZkDAO
+import com.stratio.khermes.persistence.dao.{BaseDAO, FileDAO, ZkDAO}
 import com.typesafe.config.{Config, ConfigFactory, ConfigResolveOptions}
 import com.typesafe.scalalogging.LazyLogging
 
@@ -35,6 +35,6 @@ object AppImplicits extends AppSerializer with LazyLogging {
     .resolve
 
   lazy implicit val system: ActorSystem = ActorSystem(AppConstants.AkkaClusterName, config)
-  lazy implicit val configDAO: ZkDAO = new ZkDAO
+  lazy implicit val configDAO: BaseDAO[String] = if(config.getBoolean(AppConstants.FileFlag))new FileDAO else new ZkDAO
   lazy implicit val materializer = ActorMaterializer()
 }

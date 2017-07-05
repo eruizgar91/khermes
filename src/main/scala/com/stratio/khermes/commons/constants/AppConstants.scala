@@ -39,6 +39,9 @@ object AppConstants {
   val ZookeeperRetryAttempts = "zookeeper.retryAttempts"
   val ZookeeperRetryInterval = "zookeeper.retryInterval"
 
+  val FileFlag = "khermes.file"
+  val FileDefaultPath = "file.config"
+
   val KafkaConfigPath = "kafka-config"
   val GeneratorConfigPath = "generator-config"
   val TwirlTemplatePath = "twirl-template"
